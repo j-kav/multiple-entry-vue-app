@@ -1,7 +1,8 @@
 <template>
-  <div class="home">
-    <Message msg="Welcome to the Default App home page"/>
-  </div>
+    <div class="home">
+        <Message msg="Welcome to the Default App home page"/>
+        <iframe :src="framedLocation" id="framedAppContainer"></iframe>
+    </div>
 </template>
 
 <script>
@@ -12,5 +13,13 @@ export default {
   components: {
     Message,
   },
+  data: () => ({ framedLocation: `${window.location.href}framed` }),
 };
 </script>
+<style scoped>
+    #framedAppContainer {
+        border: none;
+        width: 100%;
+        height: 400px;
+    }
+</style>

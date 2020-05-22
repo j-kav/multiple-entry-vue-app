@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Useful docs
+[html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#generating-multiple-html-files)
+
+[webpack-chain](https://github.com/neutrinojs/webpack-chain)

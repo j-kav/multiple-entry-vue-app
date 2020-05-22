@@ -25,6 +25,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
+    "html-webpack-plugin": "^4.3.0",
     "lint-staged": "^9.5.0",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
@@ -42,7 +43,12 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "max-len": "off",
+      "import/extensions": "off",
+      "import/no-unresolved": "off",
+      "@typescript-eslint/no-var-requires": "off"
+    }
   },
   "browserslist": [
     "> 1%",
@@ -53,7 +59,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
+    "*.{vue,ts}": [
       "vue-cli-service lint",
       "git add"
     ]
